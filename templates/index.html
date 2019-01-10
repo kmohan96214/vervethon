@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container" style="padding:7.5%">
+<form action="{{ url_for('search') }}" method="POST">
+  <div class="form-group">
+    <label for="formGroupExampleInput">Country</label>
+    <input name="country" type="password" class="form-control" placeholder="Country">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock%}
