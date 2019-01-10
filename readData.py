@@ -5,7 +5,9 @@ def readcsv():
     datacnt = pd.read_csv('countrydata.csv',sep=',')
     availableData = set()
     for i in range(len(datacnt)):
-        availableData.add(datacnt.iloc[i]['Country Name'])
+        temp = str(datacnt.iloc[i]['Country Name'])
+        temp = temp.lower()
+        availableData.add(temp)
     return availableData
 
 def readCountry(country):

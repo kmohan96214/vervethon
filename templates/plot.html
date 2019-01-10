@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title> {{ country }} </title>
+<style>
+.row{
+    padding : 5%;
+    border : 1%;
+}
+</style>
+</head>
+
+{% if charts %}
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            {{ charts[0]|safe }}
+        </div>
+        <div class="col-6">
+            {{ charts[1]|safe }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            {{ charts[2]|safe }}
+        </div>
+        <div class="col-6">
+            {{ charts[3]|safe }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            {{ charts[2]|safe }}
+        </div>
+        <div class="col-6">
+            {{ charts[3]|safe }}
+        </div>
+    </div>
+</div>
+</body>
+{% endif %}
+</html>
