@@ -18,19 +18,14 @@
 </div>
 <div class="container">
     {% for chart in charts %}
-            {% if loop.index==2 %}
-                <h1 style="color:brown"><center>Best fit for the given Data</center></h1>
-            {% endif %}
             <div class="row" style="">
                 <div class="col" style="background-color :lemonchiffon">
                     {{ chart|safe }}
                 </div>
-            {% if loop.index!=1 %}
-                <div class="col" align='center' style="background-color:lemonchiffon">
-                    <b>Mean squared error : {{ errors[loop.index-2] }}</b>
-                </div>
+                <!--div class='col'>
+                    <b><center>Root mean squared error : {{ errors[loop.index-1] }}</center></b>
+                </div-->
             </div>
-            {% endif %}
     {% endfor %}
 </div>
 </body>
